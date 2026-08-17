@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Journal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>The Journal</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#entries">Entries</a>
+            <a href="#dashboard">Dashboard</a>
+            <button class="theme-btn" id="themeBtn">☾</button>
+            <button class="login-btn" id="loginBtn">Log in</button>
+            <button class="register-btn" id="registerBtn">Register</button>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            ✦ VOLUME I — THOUGHTS WORTH KEEPING
+        </div>
+
+        <h1>
+            Write it down.<br>
+            <span>Keep it forever.</span>
+        </h1>
+
+        <p>
+            A colorful little corner for your thoughts, ideas,
+            memories and everyday moments. No pressure. No noise.
+            Just your words.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn" id="startWriting">
+                ✎ Start writing
+            </button>
+
+            <button class="secondary-btn" id="exploreBtn">
+                Explore entries →
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-decoration">
+
+        <div class="floating-card card-one">
+            <span>☀</span>
+            <p>Today's thought</p>
+            <strong>Small steps still count.</strong>
+        </div>
+
+        <div class="floating-card card-two">
+            <span>♡</span>
+            <p>Favorite</p>
+            <strong>Moments worth remembering.</strong>
+        </div>
+
+        <div class="circle-shape"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat">
+        <span id="totalEntries">6</span>
+        <p>Total entries</p>
+    </div>
+
+    <div class="stat">
+        <span id="favoriteCount">2</span>
+        <p>Favorites</p>
+    </div>
+
+    <div class="stat">
+        <span id="wordCount">0</span>
+        <p>Words written</p>
+    </div>
+
+    <div class="stat">
+        <span>∞</span>
+        <p>Ideas waiting</p>
+    </div>
+
+</section>
+
+
+<!-- ================= ENTRIES ================= -->
+
+<section class="entries-section" id="entries">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="small-title">YOUR COLLECTION</span>
+
+            <h2>
+                Latest entries
+                <span class="heading-dot">.</span>
+            </h2>
+
+            <p>Thoughts, memories and ideas you've chosen to keep.</p>
+        </div>
+
+        <button class="new-entry-btn" id="newEntryBtn">
+            + New entry
+        </button>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="tools">
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your entries..."
+            >
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="notes">
+                Notes
+            </button>
+
+            <button class="filter" data-filter="ideas">
+                Ideas
+            </button>
+
+            <button class="filter" data-filter="memories">
+                Memories
+            </button>
+
+            <button class="filter" data-filter="favorites">
+                ♥ Favorites
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENTRY GRID -->
+
+    <div class="entries-grid" id="entriesGrid">
+
+        <article
+            class="entry-card"
+            data-category="notes"
+            data-title="Why I started writing"
+        >
+
+            <div class="card-top">
+                <span class="category-icon purple">N</span>
+                <span class="entry-date">Aug 14, 2026</span>
+            </div>
+
+            <h3>Why I started writing</h3>
+
+            <p>
+                Sometimes thoughts become clearer when we
+                stop thinking and simply put them on paper...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn" title="Favorite">
+                    ♡
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="entry-card"
+            data-category="ideas"
+            data-title="A short note on daily ideas"
+        >
+
+            <div class="card-top">
+                <span class="category-icon orange">I</span>
+                <span class="entry-date">Aug 11, 2026</span>
+            </div>
+
+            <h3>A short note on daily ideas</h3>
+
+            <p>
+                You don't need a perfect idea to begin.
+                Sometimes the smallest thought becomes...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn active" title="Favorite">
+                    ♥
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="entry-card"
+            data-category="memories"
+            data-title="A slow morning"
+        >
+
+            <div class="card-top">
+                <span class="category-icon pink">M</span>
+                <span class="entry-date">Aug 07, 2026</span>
+            </div>
+
+            <h3>A slow morning</h3>
+
+            <p>
+                Coffee, sunlight and absolutely nowhere
+                I needed to be. Some mornings are enough...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn" title="Favorite">
+                    ♡
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="entry-card"
+            data-category="ideas"
+            data-title="Things I want to build"
+        >
+
+            <div class="card-top">
+                <span class="category-icon blue">I</span>
+                <span class="entry-date">Aug 04, 2026</span>
+            </div>
+
+            <h3>Things I want to build</h3>
+
+            <p>
+                A list of tiny projects, interesting websites
+                and ideas that I want to turn into reality...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn active" title="Favorite">
+                    ♥
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="entry-card"
+            data-category="notes"
+            data-title="Learning something new"
+        >
+
+            <div class="card-top">
+                <span class="category-icon green">L</span>
+                <span class="entry-date">Aug 01, 2026</span>
+            </div>
+
+            <h3>Learning something new</h3>
+
+            <p>
+                Every new skill starts with being completely
+                unfamiliar with something...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn">
+                    ♡
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article
+            class="entry-card"
+            data-category="memories"
+            data-title="A day to remember"
+        >
+
+            <div class="card-top">
+                <span class="category-icon yellow">M</span>
+                <span class="entry-date">Jul 28, 2026</span>
+            </div>
+
+            <h3>A day to remember</h3>
+
+            <p>
+                Some days arrive quietly but stay with you
+                much longer than you expect...
+            </p>
+
+            <div class="card-bottom">
+
+                <span>The Journal</span>
+
+                <button class="favorite-btn">
+                    ♡
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="dashboard-content">
+
+        <span class="small-title">YOUR SPACE</span>
+
+        <h2>
+            A dashboard for<br>
+            <span>your thoughts.</span>
+        </h2>
+
+        <p>
+            Keep track of what you've written, what you loved,
+            and how often you return to your journal.
+        </p>
+
+        <button class="primary-btn" id="dashboardWrite">
+            Write something
+        </button>
+
+    </div>
+
+
+    <div class="dashboard-box">
+
+        <div class="dashboard-row">
+            <span>Entries this month</span>
+            <strong id="monthEntries">6</strong>
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="dashboard-row">
+            <span>Writing streak</span>
+            <strong>7 days 🔥</strong>
+        </div>
+
+        <div class="dashboard-row">
+            <span>Favorite category</span>
+            <strong>Ideas</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote-section">
+
+    <div class="quote-mark">“</div>
+
+    <blockquote>
+        Your thoughts don't have to be perfect.
+        They just have to be yours.
+    </blockquote>
+
+    <span>— The Journal</span>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        ✦ The Journal
+    </div>
+
+    <p>
+        Made for thoughts worth keeping.
+    </p>
+
+    <div>
+        © 2026 The Journal
+    </div>
+
+</footer>
+
+
+<!-- ================= WRITE MODAL ================= -->
+
+<div class="modal-overlay" id="writeModal">
+
+    <div class="modal">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <span class="small-title">NEW ENTRY</span>
+
+        <h2>What's on your mind?</h2>
+
+        <form id="entryForm">
+
+            <input
+                type="text"
+                id="entryTitle"
+                placeholder="Give your entry a title..."
+                required
+            >
+
+            <select id="entryCategory">
+                <option value="notes">Notes</option>
+                <option value="ideas">Ideas</option>
+                <option value="memories">Memories</option>
+            </select>
+
+            <textarea
+                id="entryText"
+                placeholder="Start writing..."
+                required
+            ></textarea>
+
+            <button class="primary-btn" type="submit">
+                Save entry ✦
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="modal-overlay" id="loginModal">
+
+    <div class="modal small-modal">
+
+        <button class="close-modal" id="closeLogin">
+            ×
+        </button>
+
+        <span class="small-title">WELCOME BACK</span>
+
+        <h2>Log in</h2>
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="password"
+                placeholder="Password"
+                required
+            >
+
+            <button class="primary-btn" type="submit">
+                Log in
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
